@@ -6,7 +6,7 @@ header {
 nav{
 	background-color: #00A6B3;
 	color: #FFFFFF;
-	padding: 20px 0 20px 0;
+	padding: 0;
 }
 main {
 	width: 850px;
@@ -44,16 +44,13 @@ a {
 	border-bottom: 2px solid transparent;
 	text-transform: uppercase;
 }
-a:hover {
-	border-color: white;
-}
 p{
 	font-family: "Droid Serif", sans-serif;
 	line-height: 26px;
 	font-size: 18px;
 }
 img {
-	margin: 40px 8px 0 8px;
+	margin: 40px 8px 60px 8px;
 }
 
 footer {
@@ -64,6 +61,33 @@ footer {
 	font-size: 14px;
 	letter-spacing: .08em;
 	font-weight: 500;
+}
+.option{
+	display: inline-block;
+	text-decoration: none;
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 18px;
+	margin: 0px 20px 0px 20px;
+	padding: 10px 5px;
+	border: none;
+    
+    text-transform: uppercase;
+    height: 100%;
+    color: #FFFFFF;
+    background-color: #00A6B3;
+    outline: none;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+.option:hover {
+	color: #00A6B3;
+    background-color: #FFFFFF;
+}
+#instructions{
+	display: none;
 }
 .copyright	{
 	font-family: 'Raleway', sans-serif;
@@ -85,3 +109,80 @@ font-size: 0;
 	color: #F15B31;
 	font-weight: 700;
 }
+.visible{
+	visibility: visible;
+    opacity: 1;
+    height: 150px;
+}
+#game-board{
+	margin: 0 auto;
+}
+h3{
+	max-height: 50px;
+	font-family: 'Raleway', sans-serif;
+	color: #F15B31;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 45px;
+	margin: 0;
+	text-transform: uppercase;
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	transition: visibility 0s, opacity 1s linear;
+	-webkit-transition: transition: visibility 0s, opacity 1s linear;
+	-moz-transition: transition: visibility 0s, opacity 1s linear;
+}
+
+@media (max-width: 850px) {
+	#instructions{
+		display: inline-block;
+	}
+	section{
+		visibility: hidden;
+	    opacity: 0;
+	    height: 0;
+	    max-width: 800px;
+	   	transition: visibility 0s, opacity 1s linear;
+	    -webkit-transition: transition: visibility 0s, opacity 1s linear;
+	    -moz-transition: transition: visibility 0s, opacity 1s linear;
+	}
+	img {
+		width: 20%;
+	}
+}
+@media (max-width: 800px) {
+	#game-board{
+		max-width: 600px;
+		margin: 0 10%;
+	}
+	img {
+		width: 20%;
+	}
+	section{
+		max-width: 700px;
+	}
+	.visible{
+		height: 180px;
+	}
+}
+@media (max-width: 650px) {
+	#game-board{
+		max-width: 500px;
+		margin: 0;
+	}
+	img{
+		width: 44%;
+		margin: 0px 15px 15px 15px ;
+	}
+	div{
+		max-width: 510px;
+	}
+	section{
+		max-width:500px;
+	}
+	.visible{
+		height: 225px;
+	}
+}
+
